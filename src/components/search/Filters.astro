@@ -1,0 +1,51 @@
+---
+interface FiltersProps {
+  tipos: string[];
+}
+
+const { tipos } = Astro.props as FiltersProps;
+---
+
+<fieldset class="filtro">
+  <span>Tipo: </span>
+  {
+    tipos.map((tipo) => (
+      <div class="checkbox-container">
+        <input class="checkbox" type="checkbox" name="tipo" value={tipo} id={tipo} />
+        <label for="tipo">{tipo}</label>
+      </div>
+    ))
+  }
+</fieldset>
+
+<style>
+  .filtro {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.25rem;
+    color: var(--color-muted-foreground);
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+  }
+
+  .checkbox {
+    cursor: pointer;
+  }
+
+  .checkbox:hover {
+    box-shadow: 0 0 0 2px var(--color-primary);
+  }
+
+  .checkbox:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+  }
+
+</style>

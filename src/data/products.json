@@ -1,0 +1,138 @@
+[
+  {
+    "nombre": "Aguacate",
+    "tipo": "Fruta",
+    "valores": "Grasas saludables, vitamina E, potasio y fibra",
+    "meses": ["Ene", "Feb", "Mar", "Abr", "May", "Nov", "Dic"],
+    "region": ["Andalucía", "Canarias"],
+    "image": "https://exoticfruitbox.com/wp-content/uploads/2015/10/aguacate.jpg"
+  },
+  {
+    "nombre": "Albaricoque",
+    "tipo": "Fruta",
+    "valores": "Vitamina A, betacarotenos y antioxidantes",
+    "meses": ["May", "Jun", "Jul"],
+    "region": ["Murcia", "Valencia"],
+    "image": "https://media.istockphoto.com/id/1276593770/es/foto/albaricoques-aislamiento-de-albaricoque-albaricoques-con-rodajas-sobre-blanco-albaricoques.jpg?s=612x612&w=0&k=20&c=npzQHCnGumGG5pJS34E5Jx4oDe6tL2J6hsNLH9JjhmU="
+  },
+  {
+    "nombre": "Alcachofa",
+    "tipo": "Verdura",
+    "valores": "Fibra, cinarina y antioxidantes",
+    "meses": ["Ene", "Feb", "Mar", "Abr"],
+    "region": ["Murcia", "Navarra"],
+    "image": "https://media.istockphoto.com/id/146797714/es/foto/alcachofa.jpg?s=612x612&w=0&k=20&c=zVO7Oh6FWKz7W9ZDaVpbd_RWwN7K6fJzSw4QDXTvJlc="
+  },
+  {
+    "nombre": "Brócoli",
+    "tipo": "Verdura",
+    "valores": "Vitamina C, ácido fólico, calcio y antioxidantes",
+    "meses": ["Ene", "Feb", "Mar", "Nov", "Dic"],
+    "region": ["Navarra", "Murcia"],
+    "image": "https://media.istockphoto.com/id/183300149/es/foto/br%C3%A9col.jpg?s=612x612&w=0&k=20&c=3bpl-NTZlSiVb5oWMY7w6qylfu-mqYp8d8CIbmoOcWI="
+  },
+  {
+    "nombre": "Cereza",
+    "tipo": "Fruta",
+    "valores": "Antocianinas, vitamina C y melatonina natural",
+    "meses": ["May", "Jun", "Jul"],
+    "region": ["Aragón", "Extremadura"],
+    "image": "https://media.istockphoto.com/id/468348156/es/foto/cereza-dulce.jpg?s=612x612&w=0&k=20&c=0JqG1TOslfB9nPtn1a2YksW4JWuhA5aa2zXkw9qgu8o="
+  },
+  {
+    "nombre": "Fresa",
+    "tipo": "Fruta",
+    "valores": "Vitamina C, antioxidantes y fibra",
+    "meses": ["Mar", "Abr", "May", "Jun"],
+    "region": ["Huelva", "Cataluña"],
+    "image": "https://media.istockphoto.com/id/1412854156/es/foto/fresas-aisladas-fresa-entera-y-media-sobre-fondo-blanco-rodaja-de-fresa-con-trazado-de-recorte.jpg?s=612x612&w=0&k=20&c=pjxh7kbYhG6gv_liOdHmP8APxPoaXrLBg2A7GgGAMWE="
+  },
+  {
+    "nombre": "Kiwi",
+    "tipo": "Fruta",
+    "valores": "Alta en vitamina C, E, y fibra",
+    "meses": ["Nov", "Dic", "Ene", "Feb", "Mar"],
+    "region": ["Galicia", "Asturias"],
+    "image": "https://media.istockphoto.com/id/482728017/es/foto/kiwi.jpg?s=612x612&w=0&k=20&c=YUcC7CxGZKclGFJa4s5CVo68HqnDXVsA8ewGlYR2Z8I="
+  },
+  {
+    "nombre": "Lechuga",
+    "tipo": "Verdura",
+    "valores": "Fibra, folatos y vitamina K",
+    "meses": ["Todo el año"],
+    "region": ["Murcia", "Navarra"],
+    "image": "https://media.istockphoto.com/id/1387420863/es/foto/vista-superior-de-lechuga-butterhead-fresca-aislada.jpg?s=612x612&w=0&k=20&c=eiPbxtes-rJZ8pxmMvomegcyYUN7pgHjpfHCEPsbxPo="
+  },
+  {
+    "nombre": "Mandarina",
+    "tipo": "Fruta",
+    "valores": "Vitamina C, fibra y flavonoides",
+    "meses": ["Nov", "Dic", "Ene", "Feb"],
+    "region": ["Valencia", "Murcia"],
+    "image": "https://media.istockphoto.com/id/504384796/es/foto/maduros-frescos-tangerines.jpg?s=612x612&w=0&k=20&c=PqIgR6aGkqAFl9y9B6dNd4HoMd37WigyAg2JKZ2_F0I="
+  },
+  {
+    "nombre": "Manzana",
+    "tipo": "Fruta",
+    "valores": "Pectina, fibra soluble, antioxidantes",
+    "meses": ["Sep", "Oct", "Nov"],
+    "region": ["La Rioja", "Cataluña"],
+    "image": "https://media.istockphoto.com/id/185262648/es/foto/red-apple-con-hojas-aisladas-sobre-fondo-blanco.jpg?s=612x612&w=0&k=20&c=gDHALTekWqwwNcLgVdwYHpICNizyMBha8-CF91zUUds="
+  },
+  {
+    "nombre": "Melocotón",
+    "tipo": "Fruta",
+    "valores": "Betacarotenos, potasio y vitamina C",
+    "meses": ["Jun", "Jul", "Ago"],
+    "region": ["Aragón", "Murcia"],
+    "image": "https://media.istockphoto.com/id/1393599686/es/foto/fruta-de-melocot%C3%B3n-cortada-por-la-mitad-con-hoja-verde.jpg?s=612x612&w=0&k=20&c=0eN3Kco2qWVCRrj7fZHzaCEaCMSBqpbzr5yxXh9ZQ5M="
+  },
+  {
+    "nombre": "Naranja",
+    "tipo": "Fruta",
+    "valores": "Vitamina C, ácido cítrico y antioxidantes",
+    "meses": ["Nov", "Dic", "Ene", "Feb", "Mar"],
+    "region": ["Valencia", "Andalucía"],
+    "image": "https://media.istockphoto.com/id/2124102567/es/foto/fruto-de-naranja-con-hoja.jpg?s=612x612&w=0&k=20&c=vmZRnhu_wmAhgW0kR1ygW-1Ib9YqZlKpjjOnrWiGrxo="
+  },
+  {
+    "nombre": "Pera",
+    "tipo": "Fruta",
+    "valores": "Fibra, potasio y antioxidantes",
+    "meses": ["Sep", "Oct", "Nov"],
+    "region": ["La Rioja", "Cataluña"],
+    "image": "https://media.istockphoto.com/id/1299073137/es/foto/peras-aisladas-fruta-de-pera-verde-de-una-y-media-con-hoja-sobre-fondo-blanco-rebanada-de-pera.jpg?s=612x612&w=0&k=20&c=8cEVuSqpRG1tCfSN1KhwUO6fgZ1a2YT032bHrDWfEzc="
+  },
+  {
+    "nombre": "Pimiento",
+    "tipo": "Verdura",
+    "valores": "Vitamina C, A y antioxidantes como la capsantina",
+    "meses": ["Jun", "Jul", "Ago", "Sep"],
+    "region": ["Murcia", "Andalucía"],
+    "image": "https://media.istockphoto.com/id/153564958/es/foto/coloridos-pimientos.jpg?s=612x612&w=0&k=20&c=E_y3l8tJ_MOmYitgOxWiv51k7R2Rw8YXVCBExawfIPg="
+  },
+  {
+    "nombre": "Tomate",
+    "tipo": "Verdura",
+    "valores": "Licopeno, vitamina C y potasio",
+    "meses": ["Jun", "Jul", "Ago", "Sep"],
+    "region": ["Andalucía", "Murcia"],
+    "image": "https://media.istockphoto.com/id/1258142863/es/foto/los-tomates-se-a%C3%ADslan-sobre-fondo-blanco-tomate-medio-aislado-vista-lateral-de-tomates-entero.jpg?s=612x612&w=0&k=20&c=9DN_X4xPPiTb6XBku2JY-MdOrih5ikIKGj3TfzbqnIs="
+  },
+  {
+    "nombre": "Uva",
+    "tipo": "Fruta",
+    "valores": "Resveratrol, azúcares naturales y antioxidantes",
+    "meses": ["Sep", "Oct"],
+    "region": ["Castilla-La Mancha", "La Rioja"],
+    "image": "https://media.istockphoto.com/id/489520104/es/foto/uva-verde-aislado-sobre-fondo-blanco.jpg?s=612x612&w=0&k=20&c=azT5teXEU1IUkH1P5cMnE8Ak4L2JNRf0gmR2ibPLVCM="
+  },
+  {
+    "nombre": "Zanahoria",
+    "tipo": "Verdura",
+    "valores": "Betacarotenos, fibra y vitamina A",
+    "meses": ["Todo el año"],
+    "region": ["Castilla y León", "Navarra"],
+    "image": "https://media.istockphoto.com/id/471359531/es/foto/zanahorias.jpg?s=612x612&w=0&k=20&c=mIfL1wJJUtW1GxCNlLzFhx8SZkaNBblmaaROxAgfvcY="
+  }
+]

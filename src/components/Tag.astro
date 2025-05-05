@@ -1,0 +1,14 @@
+---
+interface TagProps {
+  tag: string;
+}
+
+const { tag } = Astro.props as TagProps;
+---
+
+<div class="tag-info">
+  <p>{tag}</p>
+</div>
+
+<style>
+</style>

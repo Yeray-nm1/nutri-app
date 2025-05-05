@@ -1,0 +1,108 @@
+#search {
+  display: grid;
+  box-sizing: border-box;
+  background-color: var(--color-card);
+  border-radius: var(--radius);
+  width: 50%;
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  margin: 0;
+  margin-bottom: var(--space-5);
+}
+
+.dropdowns {
+  border: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: none;
+  gap: var(--space-2);
+  color: var(--color-foreground);
+  margin: 0 0 var(--space-5) 0;
+  padding: 0;
+}
+
+.submit-button {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color, translate 0.2s;
+  outline: none;
+}
+
+.submit-button:focus {
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.5);
+}
+
+.submit-button:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 2px 2px rgba(22, 163, 74, 0.5);
+  translate: 0 -2px;
+}
+
+.dropdown-label {
+  font-size: 1.2rem;
+}
+
+.dropdown-select {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-input);
+  border-radius: var(--radius);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-size: 1rem;
+  line-height: 1.5;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.dropdown-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.2);
+}
+
+.filtro {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.25rem;
+  color: var(--color-muted-foreground);
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.checkbox:hover {
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.checkbox:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}

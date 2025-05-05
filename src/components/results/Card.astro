@@ -1,0 +1,46 @@
+---
+import CalendarIcon from '@icons/calendar-icon.svg';
+import RegionIcon from '@icons/global-icon.svg';
+
+export interface Props {
+  nombre: string;
+  tipo: string;
+  valores: string;
+  meses: string[];
+  region: string[];
+  image: string;
+}
+const { nombre, tipo, valores, meses, region, image } = Astro.props;
+---
+
+<article class="card">
+  <section class="image-container">
+    <img
+      src={image}
+      alt={nombre}
+      loading="lazy"
+      width="100%"
+      height="50%"
+      class="card-image"
+    />
+    <p>Tipo: {tipo}</p>
+  </section>
+
+  <section class="info-container">
+    <h3>{nombre}</h3>
+    <div class="container-months">
+      <CalendarIcon />
+      <p>{meses.join(', ')}</p>
+    </div>
+    <hr />
+    <p><strong>Valores nutricionales:</strong> {valores}</p>
+    <div class="container-months">
+      <RegionIcon />
+      <p>{region.join(', ')}</p>
+    </div>
+  </section>
+</article>
+
+<style>
+  
+</style>

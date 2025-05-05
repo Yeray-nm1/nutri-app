@@ -1,0 +1,29 @@
+---
+import '@styles/search.css';
+import Dropdown from '@components/search/Dropdown.astro';
+import Filters from '@components/search/Filters.astro';
+import Results from '@components/results/Results.astro';
+import { seasons } from '../../data/seasons';
+import regions from '../../data/regions';
+import productos from '../../data/products.json';
+const tipos = ['Verdura', 'Fruta'];
+---
+
+<form id="search">
+  <div class="dropdowns">
+    <fieldset class="dropdown">
+      <Dropdown label="Región" options={regions} />
+    </fieldset>
+    <fieldset class="dropdown">
+      <Dropdown label="Temporada" options={seasons} />
+    </fieldset>
+  </div>
+  <div class="extra">
+    <Filters tipos={tipos} />
+    <button class="submit-button" type="submit">Buscar Productos</button>
+  </div>
+</form>
+
+<Results products={productos} />
+
+<script type="module" src="/src/scripts/filter.js"></script>

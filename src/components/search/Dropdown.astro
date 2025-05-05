@@ -1,0 +1,12 @@
+---
+interface DropdownProps {
+  label: string;
+  options: string[];
+}
+const { label, options } = Astro.props as DropdownProps;
+---
+
+<label class="dropdown-label" for={label}>{label}</label>
+<select class="dropdown-select" name={label} id={label}>
+  {options.map((option) => <option value={option}>{option}</option>)}
+</select>
