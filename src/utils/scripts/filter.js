@@ -1,6 +1,6 @@
-import products from '../data/products.json';
 import { renderResults } from './ResultsTemplate.js';
-import { temporadaMeses } from '../data/seasons.js';
+import products from '../../data/products.json';
+import { temporadaMeses } from '../../data/seasons.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#search');

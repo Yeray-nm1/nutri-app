@@ -19,8 +19,9 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  overflow-y: scroll;
+  gap: 2rem;
+  padding: 1rem;
+  overflow-y: auto;
   max-height: 60vh;
   min-height: 20vh;
 }
