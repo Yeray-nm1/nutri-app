@@ -1,14 +1,11 @@
 ---
-import Search from '@components/search/Search.astro';
+import Search from '@/components/search/Search';
 import Layout from '@layouts/Layout.astro';
 import Heading from '@components/HeroBanner.astro';
-import Footer from '@components/Footer.astro';
-import Navbar from '../components/Navbar.astro';
+const pageTitle = "Home | Productos de Temporada";
 ---
 
-<Layout>
-  <Navbar />
+<Layout pageTitle={pageTitle}>
   <Heading />
-  <Search />
-  <Footer />
+  <Search client:load />
 </Layout>

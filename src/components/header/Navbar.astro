@@ -1,0 +1,26 @@
+---
+interface NavbarProps {
+  iconPath: string;
+  title: string;
+  sitemap: Array<{ name: string; path: string }>;
+}
+
+const { iconPath, title, sitemap } = Astro.props as NavbarProps;
+---
+
+<a href="/" class="navbar-logo">
+  <img src={iconPath} alt="Logo" />
+  <span>{title}</span>
+</a>
+
+<ul class="navbar-links">
+  {
+    sitemap.map((site) => (
+      <li>
+        <a href={site.path}>
+          {site.name}
+        </a>
+      </li>
+    ))
+  }
+</ul>

@@ -40,7 +40,7 @@ body {
   place-items: center;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(to bottom,
       oklch(98.2% 0.018 155.826),
       oklch(96.2% 0.044 156.743));

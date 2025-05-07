@@ -1,0 +1,23 @@
+---
+import Navbar from '@components/header/Navbar.astro';
+import '@styles/navbar.css';
+import Meatball from './Meatball.astro';
+const iconPath ='/icons/leaf-icon.svg';
+const title = "Productos de Temporada";
+const sitemap = [
+  { name: "Inicio", path: "/" },
+  { name: "Recetas", path: "/recetas" },
+  { name: "Contacto", path: "/contacto" },
+];
+---
+
+<header class="navbar">
+  <nav class="navbar-container">
+    <Meatball />
+    <Navbar iconPath={iconPath} title={title} sitemap={sitemap} />
+  </nav>
+</header>
+
+<script>
+  import "./scripts/meatball.js";
+</script>

@@ -1,0 +1,22 @@
+---
+import LinkedinIcon from '@icons/linkedin-icon.svg'
+import NetworkIcon from '@icons/network-icon.svg'
+import InstagramIcon from '@icons/instagram-icon.svg'
+import GithubIcon from '@icons/github-icon.svg'
+const { PUBLIC_PORTAFOLIO_URL, PUBLIC_GITHUB_URL, PUBLIC_LINKEDIN_URL, PUBLIC_INSTAGRAM_URL } = import.meta.env
+---
+
+<div class="footer-social" aria-label="Redes sociales">
+  <a href={PUBLIC_LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+    <LinkedinIcon />
+  </a>
+  <a href={PUBLIC_PORTAFOLIO_URL} target="_blank" rel="noopener noreferrer" aria-label="Portafolio">
+    <NetworkIcon />
+  </a>
+  <a href={PUBLIC_INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <InstagramIcon />
+  </a>
+  <a href={PUBLIC_GITHUB_URL} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+    <GithubIcon />
+  </a>
+</div>

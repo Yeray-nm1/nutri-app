@@ -1,0 +1,51 @@
+---
+import LeafIcon from '@icons/leaf-icon.svg'
+import Social from './Social.astro'
+import '@styles/footer.css'
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <section class="footer-brand">
+      <div class="footer-logo">
+        <LeafIcon />
+        <span>Productos de Temporada</span>
+      </div>
+      <p>Alimentación sostenible y saludable con productos locales de temporada en España.</p>
+    </section>
+
+    <nav class="footer-nav" aria-label="Footer Navigation">
+      <section class="footer-nav-column">
+        <h4>Explorar</h4>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+        </ul>
+      </section>
+      
+      <section class="footer-nav-column">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="#">Recetas</a></li>
+          <li><a href="#">Consejos</a></li>
+        </ul>
+      </section>
+      
+      <section class="footer-nav-column">
+        <h4>Compañía</h4>
+        <ul>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Términos de uso</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="footer-bottom-container">
+      <small>&copy; {currentYear} Productos de Temporada. Todos los derechos reservados.</small>
+      <Social /> 
+    </div>
+  </div>
+</footer>
