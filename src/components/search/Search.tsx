@@ -9,7 +9,7 @@ import { filterProducts, getAllProducts } from '../../lib/products';
 interface Product {
   nombre: string;
   tipo: string;
-  valores: string;
+  descripcion: string;
   meses: string[];
   regiones: string[];
   imagen: string;

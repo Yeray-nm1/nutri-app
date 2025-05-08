@@ -7,7 +7,7 @@ interface ResultsProps {
   products: {
     nombre: string;
     tipo: string;
-    valores: string;
+    descripcion: string;
     meses: string[];
     regiones: string[];
     imagen: string;
@@ -29,7 +29,7 @@ export default function Results({ products }: Readonly<ResultsProps>) {
             key={product.nombre}
             name={product.nombre}
             type={product.tipo}
-            description={product.valores}
+            description={product.descripcion}
             months={product.meses}
             regions={product.regiones}
             image={product.imagen}
