@@ -1,10 +1,11 @@
 import '@styles/results.css';
-import Card from '@components/results/Card';
 import Tag from '@components/results/Tag';
+import Card from '@components/results/Card';
 const tags = ['Verduras', 'Fruta']
 
 interface ResultsProps {
   products: {
+    id: number;
     nombre: string;
     tipo: string;
     descripcion: string;
@@ -24,17 +25,7 @@ export default function Results({ products }: Readonly<ResultsProps>) {
         </aside>
       </header>
       <section className="cards">
-        {products?.map(product => (
-          <Card
-            key={product.nombre}
-            name={product.nombre}
-            type={product.tipo}
-            description={product.descripcion}
-            months={product.meses}
-            regions={product.regiones}
-            image={product.imagen}
-          />
-        ))}
+        {products?.map(product => <Card key={product.id} product={product} />)}
       </section>
     </main>
   )

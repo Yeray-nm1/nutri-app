@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getAllProducts } from '../../lib/products';
+import CalendarIcon from '@icons/calendar-icon.svg';
+import RegionIcon from '@icons/region-icon.svg';
+import '@styles/product.css';
+
+interface ProductProps {
+  id: number;
+  nombre: string;
+  tipo: string;
+  descripcion: string;
+  meses: string[];
+  regiones: string[];
+  imagen: string;
+}
+
+export async function getStaticPaths() {
+  const products = await getAllProducts();
+  return products.map((product: ProductProps) => ({
+    params: { name: product.nombre },
+    props: {
+      type: product.tipo,
+      description: product.descripcion,
+      meses: product.meses,
+      regiones: product.regiones,
+      imagen: product.imagen,
+    },
+  }));
+}
+const { name } = Astro.params;
+const { type, description, meses, regiones, imagen } = Astro.props;
+---
+
+<Layout pageTitle={name}>
+  <main class="product-container">
+    <h1 class="title">{name}</h1>
+    <figure class="image-container">
+      <img src={imagen} alt={name} class="image-product" />
+    </figure>
+    <section class="additional-info">
+      <p>{type}</p>
+      <p>{description}</p>
+      <ul class="maps-info">
+        <CalendarIcon />
+        {meses.map((mes: string) => (
+          <li>{mes}</li>
+        ))}
+      </ul>
+      <ul class="maps-info">
+        <RegionIcon />
+        {regiones.map((region: string) => (
+          <li>{region}</li>
+        ))}
+      </ul>
+    </section>
+  </main>
+</Layout>

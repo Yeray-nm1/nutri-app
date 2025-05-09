@@ -18,7 +18,7 @@
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   padding: 1rem;
   overflow-y: auto;
@@ -101,17 +101,19 @@ hr {
 
 .tag-info {
   display: flex;
-  background-color: #c2eed2;
-  color: var(--color-foreground);
+  background-color: #e5f4e7;
+  color: var(--color-primary-dark);
+  font-weight: bold;
   padding: 0.25rem 1rem;
   border-radius: 1rem;
+  border: 2px solid var(--color-primary-dark);
   text-align: center;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
 .tag-info:hover {
-  background-color: #b7f2cd;
+  background-color: #c1edd2;
   transform: translateY(-1px);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }

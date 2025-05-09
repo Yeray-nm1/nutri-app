@@ -1,0 +1,50 @@
+.maps-info {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.maps-info svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.product-container {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "image-container additional-info";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  width: 50%;
+  margin: 5.5% 0;
+}
+
+.title {
+  grid-area: title;
+  justify-self: center;
+}
+
+.additional-info {
+  padding: 0 1.5rem;
+  grid-area: additional-info;
+}
+
+.image-container {
+  background-color: var(--color-card);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-md);
+  width: 50%;
+  height: auto;
+  margin: unset;
+  grid-area: image-container;
+  justify-self: end;
+}
+
+.image-container .image-product {
+  width: 100%;
+  height: auto;
+}

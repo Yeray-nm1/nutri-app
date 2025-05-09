@@ -11,3 +11,9 @@ export const getAllProducts = async () => {
   const data = await response.json();
   return data;
 }
+
+export const getProductByName = async (id: number) => {
+  const response = await fetch(`${PUBLIC_BASE_URL}/product/${id}`);
+  const data = await response.json();
+  return data;
+}

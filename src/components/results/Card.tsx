@@ -1,43 +1,27 @@
-import CalendarIcon from '@icons/CalendarIcon'
-import RegionIcon from '@icons/RegionIcon'
+import '@styles/card.css'
 
-export interface CardProps {
-  name: string;
-  type: string;
-  description: string;
-  months: string[];
-  regions: string[];
-  image: string;
+interface CardProps {
+  product: {
+    id: number;
+    nombre: string;
+    tipo: string;
+    descripcion: string;
+    meses: string[];
+    regiones: string[];
+    imagen: string;
+  };
 }
 
-export default function Card({ name, type, description, months, regions, image }: Readonly<CardProps>) {
-  return (
-    <article className="card">
-      <section className="image-container">
-        <img
-          src={image}
-          alt={name}
-          loading="lazy"
-          width="100%"
-          height="50%"
-          className="card-image"
-        />
-        <p>Tipo: {type}</p>
-      </section>
+export default function Card({ product }: Readonly<CardProps>) {
+  
+  const handleRedirect = () => {
+    window.location.href = `/product/${encodeURIComponent(product.nombre)}`;
+  }
 
-      <section className="info-container">
-        <h3>{name}</h3>
-        <div className="container-months">
-          <CalendarIcon />
-          <p>{months.join(', ')}</p>
-        </div>
-        <hr />
-        <p><strong>Valores nutricionales:</strong> {description}</p>
-        <div className="container-months">
-          <RegionIcon />
-          <p>{regions.join(', ')}</p>
-        </div>
-      </section>
-    </article>
+  return (
+    <button className='image-container' onClick={handleRedirect}>
+      <img src={product.imagen || './icons/placeholder-image.png'} alt={product.nombre} className='card-image' />
+      <img src='./icons/more-info.svg' alt='more icon' className='icon-overlay' />
+    </button>
   )
 }

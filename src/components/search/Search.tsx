@@ -7,6 +7,7 @@ import Results from '../results/Results';
 import { filterProducts, getAllProducts } from '../../lib/products';
 
 interface Product {
+  id: number;
   nombre: string;
   tipo: string;
   descripcion: string;
