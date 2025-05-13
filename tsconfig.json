@@ -30,7 +30,10 @@
       ],
       "@icons/*": [
         "./src/assets/icons/*"
-      ]
+      ],
+      "@lib/*": [
+        "./src/lib/*"
+      ],
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

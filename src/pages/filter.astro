@@ -1,0 +1,31 @@
+---
+export const prerender = false;
+import products from '@lib/products.json';
+import Layout from '@layouts/Layout.astro';
+import Heading from '@components/HeroBanner.astro';
+import Results from '@components/results/Results.astro';
+import Search from '../components/search/Search.astro';
+
+const region = Astro.url.searchParams.get('region');
+const season = Astro.url.searchParams.get('season');
+
+if (!region || !season) {
+  return Astro.redirect('/404');
+}
+
+const filteredProducts = products.filter((product) => {
+  if (region && season) {
+    const index = season.indexOf('(');
+    const selectedMonth = season.slice(index + 1, index + 4);
+    return (
+      product.regions.includes(region) && product.months.includes(selectedMonth)
+    );
+  }
+});
+---
+
+<Layout pageTitle="Resultados">
+  <Heading />
+  <Search />
+  <Results products={filteredProducts} />
+</Layout>

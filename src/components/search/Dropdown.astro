@@ -1,0 +1,17 @@
+---
+export interface Props {
+  label: string;
+  name: string;
+  options: string[];
+  selected?: string;
+}
+
+const { label, name, options, selected = '' } = Astro.props;
+---
+<label class="dropdown-label" for={name}>{label}</label>
+<select class="dropdown-select" name={name} id={name}>
+  <option value="" disabled selected={selected === ''}>Selecciona una {label}</option>
+  {options.map(option => (
+    <option value={option} selected={option === selected}>{option}</option>
+  ))}
+</select>

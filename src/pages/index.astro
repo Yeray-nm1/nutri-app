@@ -1,11 +1,15 @@
 ---
-import Search from '@/components/search/Search';
+export const prerender = false;
+import Search from '@/components/search/Search.astro';
 import Layout from '@layouts/Layout.astro';
 import Heading from '@components/HeroBanner.astro';
+import Results from '../components/results/Results.astro';
 const pageTitle = "Home | Productos de Temporada";
+import products from '@lib/products.json';
 ---
 
 <Layout pageTitle={pageTitle}>
   <Heading />
-  <Search client:load />
+  <Search />
+  <Results products={products} />
 </Layout>

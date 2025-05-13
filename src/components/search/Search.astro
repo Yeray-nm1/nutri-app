@@ -1,0 +1,38 @@
+---
+import '@styles/search.css';
+import Dropdown from './Dropdown.astro';
+import regions from '../../lib/regions';
+import { seasons } from '../../lib/seasons';
+
+const region = Astro.url.searchParams.get('region') ?? '';
+const season = Astro.url.searchParams.get('season') ?? '';
+---
+<form id="search" action="/filter" method="get">
+  <div class="dropdowns">
+    <fieldset class="dropdown">
+      <Dropdown label="Región" name="region" options={regions} selected={region} />
+    </fieldset>
+    <fieldset class="dropdown">
+      <Dropdown label="Temporada" name="season" options={seasons} selected={season} />
+    </fieldset>
+  </div>
+  <div class="extra">
+    <button class="submit-button" type="submit">Buscar Productos</button>
+  </div>
+</form>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('search') as HTMLFormElement;
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const region = formData.get('region');
+      const season = formData.get('season');
+      const url = new URL('/filter', window.location.origin);
+      url.searchParams.set('region', region as string);
+      url.searchParams.set('season', season as string);
+      window.location.assign(url.toString());
+    });
+  });
+</script>
