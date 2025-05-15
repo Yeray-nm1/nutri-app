@@ -22,9 +22,11 @@ const filteredProducts = products.filter((product) => {
     );
   }
 });
+
+const pageTitle = "Home | Productos de Temporada";
 ---
 
-<Layout pageTitle="Resultados">
+<Layout pageTitle={pageTitle}>
   <Heading />
   <Search />
   <Results products={filteredProducts} />
