@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro'
+import '@styles/contact.css'
+import Modal from '@components/Modal.astro'
+
+const pageTitle = "Contacto | Productos de Temporada"
+---
+
+<Layout pageTitle={pageTitle}>
+  <main class="contact-container">
+    <h1>Contacto</h1>
+    <p>¿Hay algún error o tienes alguna sugerencia? ¡Cuéntamelo!</p>
+    <form
+      class="contact"
+      id="form-contact">
+      <label for="email">Tu email (opcional):</label>
+      <input type="email" name="email" id="email" placeholder="ejemplo@email.com">
+      <label for="mensaje">Mensaje:</label>
+      <textarea name="mensaje" id="mensaje"
+        required placeholder="Tu mensaje..."
+        rows="5"
+        cols="50"
+      ></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <Modal mensaje="¡Gracias por tu mensaje! 🌱" />
+
+    <script>
+      const form = document.getElementById("form-contact") as HTMLFormElement;
+      const modal = document.getElementById("modal") as HTMLDialogElement;
+
+      form?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const data = new FormData(form);
+
+        await fetch("https://formsubmit.co/ajax/yeray.navarro@outlook.com", {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: data,
+        });
+
+        form.reset();
+        modal.showModal();
+      });
+    </script>
+  </main>
+</Layout>

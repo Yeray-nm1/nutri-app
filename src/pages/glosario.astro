@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import products from '../lib/products.json';
+import nutrients from '../lib/nutrients.json';
+import '@styles/glosario.css';
+
+const nutrientMap = Object.keys(nutrients).reduce(
+  (map: Record<string, string[]>, nutrient) => {
+    map[nutrient] = products
+      .filter((product) => product.description.includes(nutrient))
+      .map((product) => product.name);
+    return map;
+  },
+  {} as Record<string, string[]>
+);
+
+const sortedNutrients = Object.keys(nutrients).sort();
+---
+
+<Layout pageTitle="Glosario de Micronutrientes">
+  <main class="glosario">
+    <h1>Glosario de Micronutrientes</h1>
+    <p>
+      A continuación encontrarás cada nutriente con su función principal y en
+      qué alimentos aparece.
+    </p>
+    <article class="nutriente-container">
+      {
+        sortedNutrients.map((nutrient) => (
+          <section class="nutri-card">
+            <h2 id={nutrient.replace(/\s+/g, '-')}>{nutrient}</h2>
+            <p class="desc">
+              {nutrients[nutrient as keyof typeof nutrients] ??
+                'Descripción pendiente…'}
+            </p>
+            <div class="popover-wrapper">
+              <span class="popover-trigger">Presente en</span>
+              <div class="popover-content">
+                <ul>
+                  {nutrientMap[nutrient].map((food) => (
+                    <li>
+                      <a href={`/product/${food}`}>{food}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+        ))
+      }
+    </article>
+  </main>
+</Layout>

@@ -1,0 +1,49 @@
+.faq {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq > p {
+  color: var(--color-secondary-foreground);
+}
+
+details {
+  background: var(--color-card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details > p {
+  color: var(--color-muted-foreground);
+}
+
+.bibliography {
+  display: flex;
+  font-size: 0.75rem;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.bibliography > ul {
+  display: flex;
+  list-style: none;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  gap: 1rem;
+  max-width: 90%;
+}

@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '@styles/tips.css';
+const consejos = [
+  {
+    categoria: 'Conservación de Frutas y Verduras',
+    items: [
+      'Agrupar frutas y verduras por tipo en bandejas o cajas ayuda a mantener el orden, evita golpes que aceleran su deterioro y facilita ver qué tienes antes de que se estropee.',
+      'No laves las frutas antes de refrigerarlas: la humedad acelera el moho. Lávalas justo antes de comer.',
+      'El plátano, el aguacate y los tomates no van en la nevera: el frío altera su textura y sabor.',
+      "Aunque uses recipientes, el cajón del frigorífico puede acumular humedad o restos. Mantenerlo limpio ayuda a conservar mejor los alimentos y evitar malos olores.",
+      'Congela frutas muy maduras como fresas, plátanos o mango en trozos, y úsalas para smoothies o helados caseros.',
+    ],
+  },
+  {
+    categoria: 'Cocción y Preparación',
+    items: [
+      'Cocina al vapor verduras como brócoli, zanahoria o coliflor para conservar más nutrientes y realzar su sabor natural.',
+      'Saltea con poca agua o caldo vegetal para una cocción rápida y sin grasa, ideal con espinacas, setas o pimientos.',
+      'Asa en horno calabaza, berenjena o boniato con especias para un sabor más profundo y textura suave.',
+      'Evita cocer demasiado las verduras: al dente conservan mejor sus vitaminas, color y sabor.',
+      'Haz purés o cremas con las verduras que estén a punto de estropearse, y congélalos para otro día.',
+      'Aprovecha al máximo los restos vegetales: los tallos de brócoli, las hojas de rabanitos o la piel de calabacín se pueden cocinar.',
+    ],
+  },
+];
+---
+
+<Layout pageTitle="Tips | Productos de Temporada">
+  <main class="content-container">
+    <h1 class="page-title">Consejos para frutas y verduras</h1>
+
+    {
+      consejos.map(({ categoria, items }) => (
+        <section class="category-section">
+          <h2 class="category-title">{categoria}</h2>
+          <ul class="item-list">
+            {items.map((item) => (
+              <li class="item">{item}</li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </main>
+</Layout>

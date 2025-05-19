@@ -1,0 +1,19 @@
+---
+import '@styles/modal.css'
+
+export interface Props {
+  mensaje?: string
+}
+
+const { mensaje = "¡Gracias por tu mensaje! Lo tendré en cuenta 😊" } = Astro.props;
+---
+<dialog id="modal">
+  <p>{mensaje}</p>
+  <button id="cerrar-modal">Cerrar</button>
+</dialog>
+
+<script>
+  const cerrarBtn = document.getElementById("modal");
+  const modal = document.getElementById("modal") as HTMLDialogElement;
+  cerrarBtn?.addEventListener("click", () => modal?.close());
+</script>

@@ -1,0 +1,54 @@
+.contact-container {
+  margin: 2.5% 0;
+}
+
+.contact-container p {
+  color: var(--color-foreground);
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact > label {
+  font-weight: 600;
+}
+
+.contact > input,
+textarea {
+  padding: var(--space-3);
+  border: 1px solid var(--color-input);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.contact > input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow);
+}
+
+.contact > button {
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--color-primary-dark);
+  color: var(--color-card);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact > button:hover {
+  background-color: var(--color-primary);
+}

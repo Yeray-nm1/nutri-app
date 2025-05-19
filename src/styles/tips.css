@@ -1,0 +1,46 @@
+.content-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Título principal */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--color-primary-dark);
+}
+
+/* Sección de categorías */
+.category-section {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 800px;
+  background: var(--color-card);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+}
+
+/* Título de categoría */
+.category-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--color-primary-dark);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.5rem;
+}
+
+/* Lista de ítems */
+.item-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.item {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: var(--color-muted-foreground);
+}

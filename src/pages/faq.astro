@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '@styles/faq.css';
+const pageTitle = 'FAQ | Productos de Temporada';
+---
+
+<Layout pageTitle={pageTitle}>
+  <main class="faq">
+    <h1>Preguntas frecuentes</h1>
+    <p>
+      Este proyecto es una guía orientativa sobre frutas y verduras locales y de
+      temporada en España. Aquí aclaramos dudas frecuentes:
+    </p>
+    <section>
+      <details>
+        <summary>¿Por qué consumir productos de temporada?</summary>
+        <p>
+          Consumir productos de temporada permite disfrutar de alimentos más
+          frescos, sabrosos y nutritivos. Además, favorece una agricultura local
+          más sostenible y reduce la huella ambiental del transporte y
+          conservación de alimentos importados.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Qué pasa si consumo algo que no es de temporada?</summary>
+        <p>
+          No pasa nada. Esta web no es una norma, sino una sugerencia. Hay
+          productos disponibles fuera de su temporada natural debido a
+          invernaderos, técnicas de cultivo o importaciones.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Toda la información es 100% exacta?</summary>
+        <p>
+          Los datos provienen de fuentes oficiales como el Ministerio de
+          Sanidad, el Ministerio de Agricultura, Pesca y Alimentación y la BEDCA
+          (Base de Datos Española de Composición de Alimentos). Si encuentras
+          alguno, te agradezco que lo comuniques a través del <a href="/contact"
+            >formulario de contacto</a
+          >.
+        </p>
+        <aside class="bibliography">
+          <i>fuentes: </i>
+          <ul>
+            <li>
+              <a href="https://www.sanidad.gob.es" target="_blank">Ministerio de Sanidad</a>
+            </li>
+            <li>
+              <a href="https://www.mapa.gob.es" target="_blank"
+                >Ministerio de Agricultura, Pesca y Alimentación</a>
+            </li>
+            <li>
+              <a href="https://www.bedca.net" target="_blank"
+                >BEDCA (Base de Datos Española de Composición de Alimentos)</a>
+            </li>
+          </ul>
+        </aside>
+      </details>
+
+      <details>
+        <summary>¿Cómo interpretar los micronutrientes?</summary>
+        <p>
+          Los micronutrientes como las vitaminas y minerales son esenciales para
+          el buen funcionamiento del cuerpo, pero es importante no exagerar sus
+          efectos. Ningún alimento aislado tiene propiedades milagrosas. Lo
+          fundamental es mantener una alimentación variada y equilibrada que
+          aporte los nutrientes necesarios de forma constante.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Tengo que seguir esta guía al pie de la letra?</summary>
+        <p>
+          Para nada. Esta web es una herramienta para informarte y ayudarte a
+          tomar decisiones. No hay una forma única de alimentarse bien. Haz lo
+          que te funcione y consulta siempre con profesionales si tienes
+          necesidades específicas.
+        </p>
+      </details>
+    </section>
+  </main>
+</Layout>

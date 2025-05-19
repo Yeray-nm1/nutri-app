@@ -17,8 +17,9 @@
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
   padding: 1rem;
   overflow-y: auto;
@@ -34,7 +35,6 @@
   padding: 1rem;
   gap: 1rem;
   background-color: #ffffff;
-  font-family: 'Arial', sans-serif;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
