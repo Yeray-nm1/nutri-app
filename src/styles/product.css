@@ -31,7 +31,7 @@
   font-weight: 500;
   border-radius: 0.5rem;
   padding: 0.3rem 0.6rem;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow);
 }
 
 .product-container {
@@ -73,4 +73,62 @@
 .image-container .image-product {
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    grid-template-areas:
+      "title"
+      "image-container"
+      "additional-info"
+      "maps-info";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+  }
+
+  .maps-info {
+    margin: unset;
+    justify-self: center;
+  }
+
+  .image-container {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .image-container .image-product {
+    margin: 0 auto;
+  }
+
+  .calendar-info {
+    margin: 0.5rem 0;
+    gap: 0.3rem;
+    justify-self: center;
+  }
+
+  .description-tags {
+    justify-self: center;
+    margin: 1.5rem 0;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-container {
+    width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.3rem;
+  }
 }

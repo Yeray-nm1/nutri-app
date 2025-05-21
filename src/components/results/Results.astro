@@ -1,7 +1,5 @@
 ---
 import '@styles/results.css';
-const tags = ['Verduras', 'Fruta']
-import Tag from './Tag.astro';
 import Card from '@components/results/Card.astro'
 
 interface Product {
@@ -24,9 +22,6 @@ const { products } = Astro.props as ResultsProps
 <main class="results">
   <header class="container-head">
     <h2>Productos disponibles</h2>
-    <aside class="tags">
-      {tags.map(tag => <Tag tag={tag} />)}
-    </aside>
   </header>
   <section class="cards">
     {products?.map(product => <Card transition:name=`product ${product.id}` product={product} />)}

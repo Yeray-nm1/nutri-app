@@ -20,3 +20,56 @@ header {
   color: var(--color-muted-foreground);
   margin: 0;
 }
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+  header {
+    width: 80%;
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero > .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero > h1 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center; 
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    width: 100%;
+  }
+
+  .hero {
+    flex-direction: row; 
+    gap: 0.5rem;
+  }
+
+  .hero > .logo {
+    width: 30px; 
+    height: 30px;
+  }
+
+  .hero > h1 {
+    font-size: 1.25rem;
+  }
+
+  .subtitle {
+    font-size: 0.875rem;
+  }
+}
