@@ -13,11 +13,11 @@ const nutrientMap = Object.keys(nutrients).reduce(
   },
   {} as Record<string, string[]>
 );
-
+const pageTitle = 'Micronutrientes | Productos de Temporada';
 const sortedNutrients = Object.keys(nutrients).sort();
 ---
 
-<Layout pageTitle="Glosario de Micronutrientes">
+<Layout pageTitle={pageTitle}>
   <main class="glosario">
     <h1>Glosario de Micronutrientes</h1>
     <p>
