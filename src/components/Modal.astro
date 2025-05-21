@@ -13,7 +13,5 @@ const { mensaje = "¡Gracias por tu mensaje! Lo tendré en cuenta 😊" } = Astr
 </dialog>
 
 <script>
-  const cerrarBtn = document.getElementById("modal");
-  const modal = document.getElementById("modal") as HTMLDialogElement;
-  cerrarBtn?.addEventListener("click", () => modal?.close());
+  import '../scripts/modal.ts';
 </script>
