@@ -55,6 +55,8 @@
 
 .expanded {
   display: unset;
+  width: 100%;
+  text-align: center;
 }
 
 .meatball {
@@ -128,5 +130,9 @@
 
   .meatball {
     display: none;
+  }
+
+  .expanded {
+    display: unset;
   }
 }

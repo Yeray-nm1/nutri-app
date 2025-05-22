@@ -1,4 +1,4 @@
-function initializeMeatball() {
+function initializeMeatball(): void {
   document.querySelector('.meatball')?.addEventListener('click', () => {
     document.querySelector('.navbar-links')?.classList.toggle('expanded');
   });
