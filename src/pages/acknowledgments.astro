@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '@styles/acknowledgments.css';
+const pageTitle = 'Agradecimientos | Productos de Temporada';
+---
+
+<Layout pageTitle={pageTitle}
+  ><section class="acknowledgments">
+    <h2>💚 Agradecimientos</h2>
+    <p>
+      Este proyecto no habría sido posible sin el trabajo y la generosidad de
+      muchas personas y entidades que comparten datos, inspiración y
+      conocimiento sobre alimentación saludable, sostenibilidad y productos
+      locales.
+    </p>
+    <ul>
+      <li>
+        🌱 <strong>Ministerio de Agricultura, Pesca y Alimentación</strong> por la
+        base de datos de productos por temporada.
+      </li>
+      <li>
+        🏥 <strong>Ministerio de Sanidad</strong> y <strong>BEDCA</strong> por facilitar
+        el acceso a datos nutricionales de referencia.
+      </li>
+      <li>
+        📚 <strong>Aitor Sánchez</strong> (<em>Mi Dieta Cojea</em>) por divulgar
+        de forma accesible la importancia de fuentes oficiales como BEDCA y el
+        Ministerio de Sanidad.
+      </li>
+      <li>
+        👥 A quienes contribuyen con ideas, sugerencias y su experiencia en el
+        consumo responsable y vegano.
+      </li>
+      <li>
+        💻 Comunidad open source por las herramientas que hacen este proyecto
+        posible.
+      </li>
+    </ul>
+  </section>
+</Layout>
