@@ -5,18 +5,21 @@
   box-shadow: var(--shadow-md);
   padding: var(--space-6);
   max-width: 700px;
-  margin: var(--space-10) auto;
+  margin: var(--space-12) auto;
   text-align: left;
+  box-sizing: border-box;
 }
 
 .acknowledgments h2 {
   margin-bottom: var(--space-4);
   color: var(--color-primary-dark);
+  font-size: 1.5rem;
 }
 
 .acknowledgments p {
   margin-bottom: var(--space-4);
   color: var(--color-muted-foreground);
+  font-size: 1rem;
 }
 
 .acknowledgments ul {
@@ -26,12 +29,56 @@
 
 .acknowledgments li {
   margin-bottom: var(--space-2);
-  padding-left: var(--space-2);
+  padding-left: var(--space-6);
   position: relative;
+  font-size: 0.95rem;
 }
 
 .acknowledgments li::before {
   position: absolute;
   left: 0;
+  top: 0;
   color: var(--color-primary);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .acknowledgments {
+    padding: var(--space-4);
+    margin: 7rem var(--space-2);
+  }
+
+  .acknowledgments h2 {
+    font-size: 1.25rem;
+  }
+
+  .acknowledgments p,
+  .acknowledgments li {
+    font-size: 0.9rem;
+    padding: 0 var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .acknowledgments {
+    padding: var(--space-6);
+  }
+
+  .acknowledgments h2 {
+    text-align: center;
+  }
+
+  .acknowledgments p {
+    padding: 0 var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .acknowledgments li {
+    padding-left: var(--space-5);
+  }
+
+  .acknowledgments li::before {
+    font-size: 0.9rem;
+  }
 }
