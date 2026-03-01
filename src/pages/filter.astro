@@ -6,21 +6,16 @@ import Heading from '@components/HeroBanner.astro';
 import Results from '@components/results/Results.astro';
 import Search from '../components/search/Search.astro';
 
-const region = Astro.url.searchParams.get('region');
-const season = Astro.url.searchParams.get('season');
-
-if (!region || !season) {
-  return Astro.redirect('/404');
-}
+const region = Astro.url.searchParams.get('region') ?? '';
+const season = Astro.url.searchParams.get('season') ?? '';
+const seasonIndex = season.indexOf('(');
+const selectedMonth =
+  season && seasonIndex !== -1 ? season.slice(seasonIndex + 1, seasonIndex + 4) : '';
 
 const filteredProducts = products.filter((product) => {
-  if (region && season) {
-    const index = season.indexOf('(');
-    const selectedMonth = season.slice(index + 1, index + 4);
-    return (
-      product.regions.includes(region) && product.months.includes(selectedMonth)
-    );
-  }
+  const matchesRegion = !region || product.regions.includes(region);
+  const matchesSeason = !selectedMonth || product.months.includes(selectedMonth);
+  return matchesRegion && matchesSeason;
 });
 
 const pageTitle = "Home | Productos de Temporada";

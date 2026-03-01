@@ -27,11 +27,15 @@ const season = Astro.url.searchParams.get('season') ?? '';
     form?.addEventListener('submit', (event) => {
       event.preventDefault();
       const formData = new FormData(form);
-      const region = formData.get('region');
-      const season = formData.get('season');
+      const region = (formData.get('region') as string | null)?.trim() ?? '';
+      const season = (formData.get('season') as string | null)?.trim() ?? '';
       const url = new URL('/filter', window.location.origin);
-      url.searchParams.set('region', region as string);
-      url.searchParams.set('season', season as string);
+      if (region) {
+        url.searchParams.set('region', region);
+      }
+      if (season) {
+        url.searchParams.set('season', season);
+      }
       window.location.assign(url.toString());
     });
   });
