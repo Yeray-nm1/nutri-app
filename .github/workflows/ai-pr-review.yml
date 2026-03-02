@@ -23,6 +23,7 @@ jobs:
       - name: Run AI PR Reviewer
         uses: Yeray-nm1/ai-pr-review@main
         with:
-          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
+          groq_api_key: ${{ secrets.GROQ_API_KEY }}
+          groq_model: llama-3.1-8b-instant
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
