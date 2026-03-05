@@ -1,4 +1,5 @@
 const regions = [
+  'Todas las regiones',
   'Andalucía',
   'Aragón',
   'Asturias',

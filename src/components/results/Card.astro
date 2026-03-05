@@ -6,15 +6,15 @@ interface ProductProps {
   name: string;
   type: string;
   description: string;
-  months: string[] | undefined;
-  regions: string[] | undefined;
+  months: string[];
+  regions: string[];
   image: string;
 }
 
 const { product } = Astro.props as { product: ProductProps };
 ---
 
-<a class='image-container' href=`/product/${product?.name}`>
-  <img src={product.image || './icons/placeholder-image.png'} alt={product.name} class='card-image' />
-  <img src='./icons/more-info.svg' alt='more icon' class='icon-overlay' />
+<a class='image-container' href=`/product/${product.name}`}>
+  <img src={product.image || '/icons/placeholder-image.png'} alt={product.name} class='card-image' />
+  <img src='/icons/more-info.svg' alt='more icon' class='icon-overlay' />
 </a>

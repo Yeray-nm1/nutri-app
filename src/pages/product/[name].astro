@@ -1,7 +1,7 @@
 ---
 export const prerender = true;
 import products from '@lib/products.json';
-import Layout from '../../layouts/Layout.astro';
+import Layout from '@layouts/Layout.astro';
 import CalendarIcon from '@icons/calendar-icon.svg';
 import RegionIcon from '@icons/region-icon.svg';
 import '@styles/product.css';
@@ -17,13 +17,14 @@ interface Product {
 }
 
 export async function getStaticPaths() {
-  return products.map(product => ({
+  return products.map((product) => ({
     params: { name: product.name },
     props: product,
   }));
 }
 const { name } = Astro.params;
-const { id, type, description, months, regions, image } = Astro.props as Product;
+const { id, type, description, months, regions, image } =
+  Astro.props as Product;
 const pageTitle = `${name} | Productos de Temporada`;
 ---
 
@@ -36,24 +37,21 @@ const pageTitle = `${name} | Productos de Temporada`;
     <section class="additional-info">
       <h3>{type}</h3>
       <div class="description-tags">
-        {description.split('|').map(item => (
-          <span class="tag">{item.trim()}</span>
-        ))}
+        {
+          description
+            .split('|')
+            .map((item) => <span class="tag">{item.trim()}</span>)
+        }
       </div>
       <ul class="calendar-info">
         <CalendarIcon />
-        {months.map((mes: string) => (
-          <li>{mes}</li>
-        ))}
+        {months.map((mes: string) => <li>{mes}</li>)}
       </ul>
-      
     </section>
     <section class="maps-info">
       <ul class="calendar-info">
         <RegionIcon />
-        {regions.map((region: string) => (
-          <li>{region}</li>
-        ))}
+        {regions.map((region: string) => <li>{region}</li>)}
       </ul>
     </section>
   </main>

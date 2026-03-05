@@ -1,8 +1,8 @@
 ---
 import '@styles/search.css';
 import Dropdown from './Dropdown.astro';
-import regions from '../../lib/regions';
-import { seasons } from '../../lib/seasons';
+import regions from '@lib/regions';
+import { seasons } from '@lib/seasons';
 
 const region = Astro.url.searchParams.get('region') ?? '';
 const season = Astro.url.searchParams.get('season') ?? '';

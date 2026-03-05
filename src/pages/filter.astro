@@ -8,17 +8,31 @@ import Search from '../components/search/Search.astro';
 
 const region = Astro.url.searchParams.get('region') ?? '';
 const season = Astro.url.searchParams.get('season') ?? '';
-const seasonIndex = season.indexOf('(');
-const selectedMonth =
-  season && seasonIndex !== -1 ? season.slice(seasonIndex + 1, seasonIndex + 4) : '';
+
+const monthMap: Record<string, string[]> = {
+  'Primavera (Mar - Jun)': ['Mar', 'Abr', 'May', 'Jun'],
+  'Verano (Jun - Sep)': ['Jun', 'Jul', 'Ago', 'Sep'],
+  'Otoño (Sep - Dic)': ['Sep', 'Oct', 'Nov', 'Dic'],
+  'Invierno (Dic - Mar)': ['Dic', 'Ene', 'Feb', 'Mar'],
+};
+
+const allRegionsValues = ['Todas', 'Todas las regiones'];
+const allSeasonsValues = ['Todas', 'Todas las temporadas'];
+const isAllRegions = allRegionsValues.includes(region);
+const isAllSeasons = allSeasonsValues.includes(season);
+const seasonMonths = season && !isAllSeasons ? (monthMap[season] ?? []) : [];
 
 const filteredProducts = products.filter((product) => {
-  const matchesRegion = !region || product.regions.includes(region);
-  const matchesSeason = !selectedMonth || product.months.includes(selectedMonth);
+  const matchesRegion =
+    !region || isAllRegions || product.regions.includes(region);
+  const matchesSeason =
+    !season ||
+    isAllSeasons ||
+    seasonMonths.some((m) => product.months.includes(m));
   return matchesRegion && matchesSeason;
 });
 
-const pageTitle = "Home | Productos de Temporada";
+const pageTitle = 'Home | Productos de Temporada';
 ---
 
 <Layout pageTitle={pageTitle}>
