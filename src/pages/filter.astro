@@ -6,9 +6,6 @@ import Heading from '@components/HeroBanner.astro';
 import Results from '@components/results/Results.astro';
 import Search from '../components/search/Search.astro';
 
-const region = Astro.url.searchParams.get('region') ?? '';
-const season = Astro.url.searchParams.get('season') ?? '';
-
 const monthMap: Record<string, string[]> = {
   'Primavera (Mar - Jun)': ['Mar', 'Abr', 'May', 'Jun'],
   'Verano (Jun - Sep)': ['Jun', 'Jul', 'Ago', 'Sep'],
@@ -18,6 +15,10 @@ const monthMap: Record<string, string[]> = {
 
 const allRegionsValues = ['Todas', 'Todas las regiones'];
 const allSeasonsValues = ['Todas', 'Todas las temporadas'];
+
+const region = Astro.url.searchParams.get('region') ?? '';
+const season = Astro.url.searchParams.get('season') ?? '';
+
 const isAllRegions = allRegionsValues.includes(region);
 const isAllSeasons = allSeasonsValues.includes(season);
 const seasonMonths = season && !isAllSeasons ? (monthMap[season] ?? []) : [];
