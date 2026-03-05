@@ -6,12 +6,12 @@ import Heading from '@components/HeroBanner.astro';
 import Results from '@components/results/Results.astro';
 import Search from '../components/search/Search.astro';
 
-const monthMap: Record<string, string[]> = {
-  'Primavera (Mar - Jun)': ['Mar', 'Abr', 'May', 'Jun'],
-  'Verano (Jun - Sep)': ['Jun', 'Jul', 'Ago', 'Sep'],
-  'Otoño (Sep - Dic)': ['Sep', 'Oct', 'Nov', 'Dic'],
-  'Invierno (Dic - Mar)': ['Dic', 'Ene', 'Feb', 'Mar'],
-};
+const monthMap = new Map<string, string[]>([
+  ['Primavera (Mar - Jun)', ['Mar', 'Abr', 'May', 'Jun']],
+  ['Verano (Jun - Sep)', ['Jun', 'Jul', 'Ago', 'Sep']],
+  ['Otoño (Sep - Dic)', ['Sep', 'Oct', 'Nov', 'Dic']],
+  ['Invierno (Dic - Mar)', ['Dic', 'Ene', 'Feb', 'Mar']],
+]);
 
 const allRegionsValues = ['Todas', 'Todas las regiones'];
 const allSeasonsValues = ['Todas', 'Todas las temporadas'];
@@ -21,7 +21,7 @@ const season = Astro.url.searchParams.get('season') ?? '';
 
 const isAllRegions = allRegionsValues.includes(region);
 const isAllSeasons = allSeasonsValues.includes(season);
-const seasonMonths = season && !isAllSeasons ? (monthMap[season] ?? []) : [];
+const seasonMonths = season && !isAllSeasons ? (monthMap.get(season) ?? []) : [];
 
 const filteredProducts = products.filter((product) => {
   const matchesRegion =
@@ -29,7 +29,7 @@ const filteredProducts = products.filter((product) => {
   const matchesSeason =
     !season ||
     isAllSeasons ||
-    seasonMonths.some((m) => product.months.includes(m));
+    seasonMonths.some((m: string) => product.months.includes(m));
   return matchesRegion && matchesSeason;
 });
 

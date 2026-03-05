@@ -12,7 +12,7 @@ interface ProductProps {
 const { product } = Astro.props as { product: ProductProps };
 ---
 
-<a class='image-container' href=`/product/${product.name}`}>
+<a class='image-container' href={`/product/${encodeURIComponent(product.name)}`}>
   <img src={product.image || '/icons/placeholder-image.png'} alt={product.name} class='card-image' />
   <img src='/icons/more-info.svg' alt='more icon' class='icon-overlay' />
 </a>
