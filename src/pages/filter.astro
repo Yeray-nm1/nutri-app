@@ -13,14 +13,14 @@ const monthMap = new Map<string, string[]>([
   ['Invierno (Dic - Mar)', ['Dic', 'Ene', 'Feb', 'Mar']],
 ]);
 
-const allRegionsValues = ['Todas', 'Todas las regiones'];
-const allSeasonsValues = ['Todas', 'Todas las temporadas'];
+const allRegionsValues = new Set(['Todas', 'Todas las regiones']);
+const allSeasonsValues = new Set(['Todas', 'Todas las temporadas']);
 
-const region = Astro.url.searchParams.get('region') ?? '';
-const season = Astro.url.searchParams.get('season') ?? '';
+const region = Astro.url.searchParams.get('region')?.trim() ?? '';
+const season = Astro.url.searchParams.get('season')?.trim() ?? '';
 
-const isAllRegions = allRegionsValues.includes(region);
-const isAllSeasons = allSeasonsValues.includes(season);
+const isAllRegions = allRegionsValues.has(region);
+const isAllSeasons = allSeasonsValues.has(season);
 const seasonMonths = season && !isAllSeasons ? (monthMap.get(season) ?? []) : [];
 
 const filteredProducts = products.filter((product) => {
