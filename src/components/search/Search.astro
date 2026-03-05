@@ -29,6 +29,11 @@ const season = Astro.url.searchParams.get('season') ?? '';
       const formData = new FormData(form);
       const region = (formData.get('region') as string | null)?.trim() ?? '';
       const season = (formData.get('season') as string | null)?.trim() ?? '';
+
+      if (!region && !season) {
+        return;
+      }
+
       const url = new URL('/filter', window.location.origin);
       if (region) {
         url.searchParams.set('region', region);
